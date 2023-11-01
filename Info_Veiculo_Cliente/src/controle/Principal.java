@@ -60,5 +60,8 @@ public class Principal {
         System.out.println("Informações do Veiculo 2:");
         System.out.println(veiculo2.getVeiculo());
         ent.close();
+        
+        /* Esta linha foi adicionada para teste de commits do GitHUB */
+        System.out.println("Olá pessoal do GitHub");
     }
 }
