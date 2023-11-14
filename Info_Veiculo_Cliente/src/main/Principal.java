@@ -61,21 +61,30 @@ public class Principal {
 					break;
 
 				case 2:
-					idVeiculo++;
-					System.out.println("");
-					System.out.print("Digite o fabricante do veículo " +idVeiculo+ ": ");
-					String fabricante = scanner.nextLine();
-					System.out.print("Digite o modelo do veículo da" +fabricante+ ": ");
-					String modelo = scanner.nextLine();
-					System.out.print("Digite a placa do veículo" +fabricante+ " " +modelo+ ": ");
-					String placa = scanner.nextLine();
-					System.out.print("Digite a cor do veículo" +fabricante+ " " +modelo+ ": ");
-					String cor = scanner.nextLine();
-					System.out.print("Digite o ano do veículo" +fabricante+ " " +modelo+ ": ");
-					int ano = scanner.nextInt();
-					veiculoController.adicionarVeiculo(idVeiculo, placa, fabricante, modelo, cor, ano);
-					System.out.print("Veículo adicionado!");
-					System.out.print("\n");
+					try {
+						idVeiculo++;
+						System.out.println("");
+						System.out.print("Digite o fabricante do veículo " +idVeiculo+ ": ");
+						scanner.nextLine();
+						String fabricante = scanner.nextLine();
+						System.out.print("Digite o modelo do veículo da " +fabricante+ ": ");
+						String modelo = scanner.nextLine();
+						System.out.print("Digite a placa do veículo " +fabricante+ " " +modelo+ ": ");
+						String placa = scanner.nextLine();
+						System.out.print("Digite a cor do veículo " +fabricante+ " " +modelo+ ": ");
+						String cor = scanner.nextLine();
+						System.out.print("Digite o ano do veículo " +fabricante+ " " +modelo+ ": ");
+						int ano = scanner.nextInt();
+						veiculoController.adicionarVeiculo(idVeiculo, placa, fabricante, modelo, cor, ano);
+						System.out.print("Veículo adicionado!");
+						System.out.print("\n");
+					}
+					catch (java.util.InputMismatchException e) {
+						idVeiculo--;
+						System.out.println("");
+						System.out.println("Ano digitado incorretamente.");
+		                scanner.nextLine(); // Limpa o buffer do scanner
+					}
 					break;
 
 				case 3:
@@ -122,7 +131,7 @@ public class Principal {
 			 * Em outras palavras, quando algum erro (exceção) acontecer dentro do bloco try,
 			 * o sistema automaticamente para a execução normal, e executa o bloco catch.
 			 * Exemplo: na conversão de uma string em número inteiro, o sistema já executa o catch
-			 * e escreve no console "Opção inválida...."
+			 * e escreve no console "Opção inválida..."
 			 */
 			catch (java.util.InputMismatchException e) {
 				System.out.println("");

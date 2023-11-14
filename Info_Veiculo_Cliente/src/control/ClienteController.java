@@ -37,4 +37,3 @@ public class ClienteController {
         clienteView.removerCliente(clienteRemovido);
     }
 }
-

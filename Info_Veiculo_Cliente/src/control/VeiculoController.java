@@ -37,4 +37,3 @@ public class VeiculoController {
         veiculoView.removerVeiculo(veiculoRemovido);
     }
 }
-
