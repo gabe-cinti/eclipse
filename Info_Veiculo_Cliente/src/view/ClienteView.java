@@ -47,4 +47,8 @@ public class ClienteView {
         System.out.println("Email: " +cliente.getEmail());
         System.out.println("");
     }
+
+    public void atualizarCliente(int idClienteAtualizar) {
+    	System.out.println("Informações do Cliente " +idClienteAtualizar+ " atualizadas!\n");
+    }
 }

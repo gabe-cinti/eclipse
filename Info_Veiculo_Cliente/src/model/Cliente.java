@@ -1,5 +1,10 @@
 package model;
 
+//jpa hibernate
+// depois re-escrever o projeto em spring
+//@entity vai buascar uma table com o nome cliente
+//@ table "eduardor é legal" = "cliente"
+//
 public class Cliente {
 	private int idCliente;
 	private String cpf;

@@ -28,12 +28,12 @@ public class VeiculoView {
 
     public void removerVeiculo(boolean veiculoRemovido) {
         if (veiculoRemovido) {
-        	System.out.println("Veiculo removido com sucesso!");
+        	System.out.println("Veículo removido com sucesso!");
         	System.out.println("");
         }
         
         else {
-        	System.out.println("Veiculo não encontrado na lista.");        
+        	System.out.println("Veículo não encontrado na lista.");        
         	System.out.println("");
         }
     }

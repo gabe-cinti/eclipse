@@ -88,7 +88,41 @@ public class Principal {
 					break;
 
 				case 3:
+					int opcaocliente = -1;
 					clienteController.exibirListaClientes(null);
+						System.out.println("\n");
+						System.out.println("Deseja atualizar as informações de algum cliente?");
+						System.out.println("1. Sim");
+						System.out.println("2. Não");
+						System.out.println("");
+						System.out.print("Escolha uma opção: ");
+						opcaocliente = scanner.nextInt();
+						if (opcaocliente == 1) {
+							System.out.println("\n");
+							int idClienteAtualizar = idCliente;
+							System.out.print("Digite o ID do Cliente: ");
+							scanner.nextLine();
+							idClienteAtualizar = scanner.nextInt();
+							System.out.println("O Cliente contendo o ID >" +idClienteAtualizar+ "< será atualizado");
+							System.out.println("Insira as novas informações do Cliente " +idClienteAtualizar+ ": ");
+							System.out.println("Se deseja manter alguma informação como está, apenas");
+							System.out.println("a digite novamente");
+							System.out.println("----------------------------------------------------");
+							System.out.print("Digite o nome do cliente " +idClienteAtualizar+ ": ");
+							scanner.nextLine();
+							nome = scanner.nextLine();
+							System.out.print("Digite o CPF: ");
+							cpf = scanner.nextLine();
+							System.out.print("Digite o telefone: ");
+							telefone = scanner.nextLine();
+							System.out.print("Digite o novo endereço: ");
+							endereco = scanner.nextLine();
+							System.out.print("Digite o novo email: ");
+							email = scanner.nextLine();
+							clienteController.atualizarCliente(idClienteAtualizar);
+							clienteController.adicionarCliente(idClienteAtualizar, nome, cpf, telefone, endereco, email);
+							break;
+						}
 					break;
 
 				case 4:
@@ -100,16 +134,16 @@ public class Principal {
 					System.out.println("Digite o CPF do Cliente a ser removido: ");
 					scanner.nextLine();
 					String cpfClienteRemover = scanner.nextLine();
-					System.out.println("O Cliente contendo o CPF " +cpfClienteRemover+ "será removido");
+					System.out.println("O Cliente contendo o CPF >" +cpfClienteRemover+ "< será removido");
 					clienteController.removerCliente(cpfClienteRemover);
 					break;
 					
 				case 6:
 					System.out.println("");
-					System.out.println("Digite a PLACA do Veiculo a ser removido: ");
+					System.out.println("Digite a PLACA do Veículo a ser removido: ");
 					scanner.nextLine();
 					String placaVeiculoRemover = scanner.nextLine();
-					System.out.println("O Veículo contendo a PLACA " +placaVeiculoRemover+ "será removido");
+					System.out.println("O Veículo contendo a PLACA >" +placaVeiculoRemover+ "< será removido");
 					veiculoController.removerVeiculo(placaVeiculoRemover);
 					break;
 	

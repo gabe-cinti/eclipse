@@ -36,4 +36,14 @@ public class ClienteController {
         }
         clienteView.removerCliente(clienteRemovido);
     }
+    
+    public void atualizarCliente(int idClienteAtualizar) {
+        for (Cliente cliente : clienteDAO.obterListaClientes()) {
+            if (cliente.getIdCliente() == idClienteAtualizar) {
+            	clienteDAO.atualizarCliente(cliente);
+                break;
+            }
+        }
+        clienteView.atualizarCliente(idClienteAtualizar);
+    }
 }

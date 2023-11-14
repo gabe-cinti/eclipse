@@ -25,4 +25,8 @@ public class ClienteDAO {
     public void removerCliente(Cliente cliente) {
     	listaClientes.remove(cliente);
     }
+
+    public void atualizarCliente(Cliente cliente) {
+    	listaClientes.remove(cliente);
+    }
 }
